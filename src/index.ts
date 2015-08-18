@@ -476,6 +476,7 @@ export
 function reverse<T>(array: T[], fromIndex = 0, toIndex = array.length): T[] {
   var i = Math.max(0, Math.min(fromIndex | 0, array.length - 1));
   var j = Math.max(0, Math.min(toIndex | 0, array.length - 1));
+  if (j < i) i = j + (j = i, 0);
   while (i < j) {
     var tmpval = array[i];
     array[i++] = array[j];
