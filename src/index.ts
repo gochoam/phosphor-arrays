@@ -26,6 +26,23 @@
  * #### Notes
  * It is not safe to modify the size of the array while iterating.
  *
+ * #### Example
+ * ```typescript
+ * import * as arrays from 'phosphor-arrays';
+ *
+ * function logger(value: number): void {
+ *   console.log(value);
+ * }
+ *
+ * var data = [1, 2, 3, 4];
+ * arrays.forEach(data, logger);           // logs 1, 2, 3, 4
+ * arrays.forEach(data, logger, 2);        // logs 3, 4
+ * arrays.forEach(data, logger, 2, true);  // logs 3, 4, 1, 2
+ * arrays.forEach(data, (v, i) => {        // 2
+ *   if (v === 3) return i;
+ * });
+ * ```
+ *
  * **See also** [[rforEach]]
  */
 export
@@ -68,6 +85,22 @@ function forEach<T, U>(array: T[], callback: (value: T, index: number) => U, fro
  * #### Notes
  * It is not safe to modify the size of the array while iterating.
  *
+ * #### Example
+ * ```typescript
+ * import * as arrays from 'phosphor-arrays';
+ *
+ * function logger(value: number): void {
+ *   console.log(value);
+ * }
+ *
+ * var data = [1, 2, 3, 4];
+ * arrays.rforEach(data, logger);           // logs 4, 3, 2, 1
+ * arrays.rforEach(data, logger, 2);        // logs 3, 2, 1
+ * arrays.rforEach(data, logger, 2, true);  // logs 3, 2, 1, 4
+ * arrays.rforEach(data, (v, i) => {        // 2
+ *   if (v === 3) return i;
+ * });
+ * ```
  * **See also** [[forEach]]
  */
 export
