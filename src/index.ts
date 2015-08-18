@@ -111,7 +111,7 @@ function rforEach<T, U>(array: T[], callback: (value: T, index: number) => U, fr
  *
  * #### Example
  * ```typescript
- * import arrays = phosphor.collections.arrays;
+ * import * as arrays from 'phosphor-arrays';
  *
  * function isEven(value: number): boolean {
  *   return value % 2 === 0;
@@ -165,7 +165,7 @@ function findIndex<T>(array: T[], pred: (value: T, index: number) => boolean, fr
  *
  * #### Example
  * ```typescript
- * import arrays = phosphor.collections.arrays;
+ * import * as arrays from 'phosphor-arrays';
  *
  * function isEven(value: number): boolean {
  *   return value % 2 === 0;
@@ -219,7 +219,7 @@ function rfindIndex<T>(array: T[], pred: (value: T, index: number) => boolean, f
  *
  * #### Example
  * ```typescript
- * import arrays = phosphor.collections.arrays;
+ * import * as arrays from 'phosphor-arrays';
  *
  * function isEven(value: number): boolean {
  *   return value % 2 === 0;
@@ -261,7 +261,7 @@ function find<T>(array: T[], pred: (value: T, index: number) => boolean, fromInd
  *
  * #### Example
  * ```typescript
- * import arrays = phosphor.collections.arrays;
+ * import * as arrays from 'phosphor-arrays';
  *
  * function isEven(value: number): boolean {
  *   return value % 2 === 0;
@@ -297,7 +297,7 @@ function rfind<T>(array: T[], pred: (value: T, index: number) => boolean, fromIn
  *
  * #### Example
  * ```typescript
- * import arrays = phosphor.collections.arrays;
+ * import * as arrays from 'phosphor-arrays';
  *
  * var data = [0, 1, 2, 3, 4];
  * arrays.insert(data, 0, 12);  // 0
@@ -334,7 +334,7 @@ function insert<T>(array: T[], index: number, value: T): number {
  *
  * #### Example
  * ```typescript
- * import arrays = phosphor.collections.arrays;
+ * import * as arrays from 'phosphor-arrays';
  *
  * var data = [0, 1, 2, 3, 4];
  * arrays.move(data, 1, 2);   // true
@@ -381,7 +381,7 @@ function move<T>(array: T[], fromIndex: number, toIndex: number): boolean {
  *
  * #### Example
  * ```typescript
- * import arrays = phosphor.collections.arrays;
+ * import * as arrays from 'phosphor-arrays';
  *
  * var data = [0, 1, 2, 3, 4];
  * arrays.removeAt(data, 1);   // 1
@@ -419,7 +419,7 @@ function removeAt<T>(array: T[], index: number): T {
  *
  * #### Example
  * ```typescript
- * import arrays = phosphor.collections.arrays;
+ * import * as arrays from 'phosphor-arrays';
  *
  * var data = [0, 1, 2, 3, 4];
  * arrays.remove(data, 1);  // 1
@@ -462,7 +462,7 @@ function remove<T>(array: T[], value: T): number {
  *
  * #### Example
  * ```typescript
- * import arrays = phosphor.collections.arrays;
+ * import * as arrays from 'phosphor-arrays';
  *
  * var data = [0, 1, 2, 3, 4];
  * arrays.reverse(data, 1, 3);    // [0, 3, 2, 1, 4]
@@ -502,7 +502,7 @@ function reverse<T>(array: T[], fromIndex = 0, toIndex = array.length): T[] {
  *
  * #### Example
  * ```typescript
- * import arrays = phosphor.collections.arrays;
+ * import * as arrays from 'phosphor-arrays';
  *
  * var data = [0, 1, 2, 3, 4];
  * arrays.rotate(data, 2);    // [2, 3, 4, 0, 1]
@@ -555,7 +555,7 @@ function rotate<T>(array: T[], delta: number): T[] {
  *
  * #### Example
  * ```typescript
- * import arrays = phosphor.collections.arrays;
+ * import * as arrays from 'phosphor-arrays';
  *
  * function numberCmp(a: number, b: number): boolean {
  *   return a < b;
@@ -611,7 +611,7 @@ function lowerBound<T, U>(array: T[], value: U, cmp: (element: T, value: U) => b
  *
  * #### Example
  * ```typescript
- * import arrays = phosphor.collections.arrays;
+ * import * as arrays from 'phosphor-arrays';
  *
  * function numberCmp(a: number, b: number): number {
  *   return a < b;
