@@ -455,7 +455,7 @@ function remove<T>(array: T[], value: T): number {
  * @param fromIndex - The index of the first element of the range.
  *   This value will be clamped to the array bounds.
  *
- * @param fromIndex - The index of the last element of the range.
+ * @param toIndex - The index of the last element of the range.
  *   This value will be clamped to the array bounds.
  *
  * @returns A reference to the original array.
