@@ -9,7 +9,8 @@
 
 import expect = require('expect.js');
 
-import * as arrays from '../lib/index';
+import * as arrays
+  from '../lib/index';
 
 
 describe('phosphor-arrays', () => {
