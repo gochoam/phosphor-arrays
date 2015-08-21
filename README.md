@@ -3,7 +3,7 @@ phosphor-arrays
 
 A collection of array utility functions.
 
-[API Docs](http://phosphorjs.github.io/phosphor-arrays/)
+[API Docs](http://phosphorjs.github.io/phosphor-arrays/api/)
 
 
 Package Install
