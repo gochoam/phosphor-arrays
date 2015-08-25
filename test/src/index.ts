@@ -10,7 +10,7 @@
 import expect = require('expect.js');
 
 import * as arrays
-  from '../lib/index';
+  from '../../lib/index';
 
 
 describe('phosphor-arrays', () => {
