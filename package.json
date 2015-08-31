@@ -26,7 +26,7 @@
     "docs": "rimraf docs/api && typedoc --options scripts/tdoptions.json",
     "prepublish": "npm run build",
     "test": "mocha test/build/index.js",
-    "test:coverage": "cd test && istanbul cover _mocha build/index.js"
+    "test:coverage": "istanbul cover --dir test/coverage _mocha -- test/build/index.js"
   },
   "repository": {
     "type": "git",
