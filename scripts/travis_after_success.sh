@@ -3,7 +3,6 @@
 #submit coverage to coveralls
 cat ./test/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 
-
 # push docs on master branch
 if [[ $TRAVIS_PULL_REQUEST == false && $TRAVIS_BRANCH == "master" ]]
 then
