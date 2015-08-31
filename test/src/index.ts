@@ -59,8 +59,12 @@ describe('phosphor-arrays', () => {
       var data = [1, 2, 3, 4, 5];
       var r1 = arrays.forEach(data, v => { });
       var r2 = arrays.forEach(data, v => v);
+      var r3 = arrays.forEach(data, v => { }, 2, true);
+      var r4 = arrays.forEach(data, v => v, 2, true);
       expect(r1).to.be(void 0);
       expect(r2).to.be(1);
+      expect(r3).to.be(void 0);
+      expect(r4).to.be(3);
     });
 
     it('should terminate iteration when the callback returns a value', () => {
@@ -117,8 +121,12 @@ describe('phosphor-arrays', () => {
       var data = [1, 2, 3, 4, 5];
       var r1 = arrays.rforEach(data, v => { });
       var r2 = arrays.rforEach(data, v => v);
+      var r3 = arrays.rforEach(data, v => { }, 2, true);
+      var r4 = arrays.rforEach(data, v => v, 2, true);
       expect(r1).to.be(void 0);
       expect(r2).to.be(5);
+      expect(r3).to.be(void 0);
+      expect(r4).to.be(3);
     });
 
     it('should terminate iteration when the callback returns a value', () => {
@@ -157,6 +165,14 @@ describe('phosphor-arrays', () => {
       expect(i).to.be(-1);
     });
 
+    it('should return `-1` if `fromIndex` is out of range', () => {
+      var data = [1, 2, 3, 4, 5];
+      var r1 = arrays.findIndex(data, v => v % 2 === 0, -1);
+      var r2 = arrays.findIndex(data, v => v % 2 === 0, 10);
+      expect(r1).to.be(-1);
+      expect(r2).to.be(-1);
+    });
+
   });
 
   describe('rfindIndex()', () => {
@@ -183,6 +199,14 @@ describe('phosphor-arrays', () => {
       var data = [1, 2, 3, 4, 5];
       var i = arrays.rfindIndex(data, v => v % 7 === 0);
       expect(i).to.be(-1);
+    });
+
+    it('should return `-1` if `fromIndex` is out of range', () => {
+      var data = [1, 2, 3, 4, 5];
+      var r1 = arrays.rfindIndex(data, v => v % 2 === 0, -1);
+      var r2 = arrays.rfindIndex(data, v => v % 2 === 0, 10);
+      expect(r1).to.be(-1);
+      expect(r2).to.be(-1);
     });
 
   });
@@ -433,6 +457,12 @@ describe('phosphor-arrays', () => {
       var data = [1, 2, 3, 4, 5];
       arrays.rotate(data, 0);
       expect(data).to.eql([1, 2, 3, 4, 5]);
+    });
+
+    it('should be a no-op for an array length `<= 1`', () => {
+      var data = [1];
+      arrays.rotate(data, 1);
+      expect(data).to.eql([1]);
     });
 
     it('should return a reference to the original array', () => {
