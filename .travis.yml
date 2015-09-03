@@ -17,3 +17,9 @@ script:
   - ./scripts/travis_script.sh
 after_success:
   - ./scripts/travis_after_success.sh
+deploy:
+  provider: npm
+  email: sccolbert@gmail.com
+  api_key: heW/ijXVjlu15PDOFO5dEE+qHiahe+eh09YTuI0nSDBGx++OvWRr1N1APRhxJ/gozJjS7SgRuc/oc7W3iJDgfMimr5ua09evteTu266A/Mqv9Ib5WnDT6wMEadGV6GqlnHAkATSTlrJieBq+NQOJzyUSJy6Ny47nceVz83sxU0z7eGIZXMM0AqyB82RFVuI3lj5G4bvP/8bg1Pwz+txCA+BZytTKumqJgibTRyDR0Mpq/EehXVtCu06UF0CDFw4HdB/LBl3f7oDRvBKdwtLdmx6DtJTd7HbDPndxdz4YlxdzrnX6NagvaUFkuCT80EcVoYy5zdRe944ng8wnvSg7Mx4PDRMPyk79mzkBVCy4k5xvVndf/hwwdq5vzCxBJyS7VTYWWaPwjgwfkNysV4esWXCNlNLESwjSvDPGJXWUObo4c8H11T1MBKOfFhKTHNsi5eLZCHk9k78NtAHcL/1ivilpp4GQtIhfXRmOpng0SJhXcdhCTG1PsbQE990cQ68EqXHDrftE7Ml5k34sD7+FRmBrIaLOB4OKgMZdSNrxNTtBgQPcF9ZPLPuMIWuIsBUMQ9tXk6gUvdQUx9Ye6RmnwStH8L2HA39FmW1zA4vg5fgrcdqyTcwHiPGuEYxvOr37MzngmcRbARlZxDDX07Mz4birZoAdeBXHZtPH0eE9n+8=
+  on:
+    tags: true
