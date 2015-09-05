@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
+	<title>phosphor-arrays</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title"></a>
+					<a href="index.html" class="title">phosphor-arrays</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -57,13 +57,1161 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1> </h1>
+			<h1> phosphor-arrays</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#find" class="tsd-kind-icon">find</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#findindex" class="tsd-kind-icon">find<wbr>Index</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#foreach" class="tsd-kind-icon">for<wbr>Each</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#insert" class="tsd-kind-icon">insert</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#lowerbound" class="tsd-kind-icon">lower<wbr>Bound</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#move" class="tsd-kind-icon">move</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#remove" class="tsd-kind-icon">remove</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#removeat" class="tsd-kind-icon">remove<wbr>At</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#reverse" class="tsd-kind-icon">reverse</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#rfind" class="tsd-kind-icon">rfind</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#rfindindex" class="tsd-kind-icon">rfind<wbr>Index</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#rforeach" class="tsd-kind-icon">rfor<wbr>Each</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#rotate" class="tsd-kind-icon">rotate</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#upperbound" class="tsd-kind-icon">upper<wbr>Bound</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="find" class="tsd-anchor"></a>
+					<h3>find</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">find&lt;T&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, pred<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, fromIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, wrap<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phosphorjs/phosphor-arrays/blob/HEAD/src/index.ts#L271">index.ts:271</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Find the first value which matches a predicate.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The array of values to be searched.</p>
+									</div>
+								</li>
+								<li>
+									<h5>pred: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The predicate function to apply to the values.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>value: <span class="tsd-signature-type">T</span></h5>
+														</li>
+														<li>
+															<h5>index: <span class="tsd-signature-type">number</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fromIndex: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The starting index of the search.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> wrap: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Whether the search wraps around at the end of the array.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+							<p>The first matching value, or <code>undefined</code> if no value matches
+							the predicate or if the start index is out of range.</p>
+							<h4 id="notes">Notes</h4>
+							<p>It is not safe to modify the size of the array while iterating.</p>
+							<h4 id="example">Example</h4>
+							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isEven</span>(<span class="hljs-params">value: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">boolean</span> </span>{
+  <span class="hljs-keyword">return</span> value % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-keyword">var</span> data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>];
+arrays.find(data, isEven);           <span class="hljs-comment">// 2</span>
+arrays.find(data, isEven, <span class="hljs-number">4</span>);        <span class="hljs-comment">// 2</span>
+arrays.find(data, isEven, <span class="hljs-number">6</span>);        <span class="hljs-comment">// undefined</span>
+arrays.find(data, isEven, <span class="hljs-number">6</span>, <span class="hljs-literal">true</span>);  <span class="hljs-comment">// 2</span>
+</code></pre>
+							<p><strong>See also</strong> <a href="globals.html#rfind">rfind</a>.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="findindex" class="tsd-anchor"></a>
+					<h3>find<wbr>Index</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Index&lt;T&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, pred<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, fromIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, wrap<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phosphorjs/phosphor-arrays/blob/HEAD/src/index.ts#L163">index.ts:163</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Find the index of the first value which matches a predicate.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The array of values to be searched.</p>
+									</div>
+								</li>
+								<li>
+									<h5>pred: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The predicate function to apply to the values.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>value: <span class="tsd-signature-type">T</span></h5>
+														</li>
+														<li>
+															<h5>index: <span class="tsd-signature-type">number</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> fromIndex: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The starting index of the search.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> wrap: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Whether the search wraps around at the end of the array.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>The index of the first matching value, or <code>-1</code> if no value
+							matches the predicate or if the start index is out of range.</p>
+							<h4 id="notes">Notes</h4>
+							<p>It is not safe to modify the size of the array while iterating.</p>
+							<h4 id="example">Example</h4>
+							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isEven</span>(<span class="hljs-params">value: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">boolean</span> </span>{
+  <span class="hljs-keyword">return</span> value % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-keyword">var</span> data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>];
+arrays.findIndex(data, isEven);           <span class="hljs-comment">// 1</span>
+arrays.findIndex(data, isEven, <span class="hljs-number">4</span>);        <span class="hljs-comment">// 5</span>
+arrays.findIndex(data, isEven, <span class="hljs-number">6</span>);        <span class="hljs-comment">// -1</span>
+arrays.findIndex(data, isEven, <span class="hljs-number">6</span>, <span class="hljs-literal">true</span>);  <span class="hljs-comment">// 1</span>
+</code></pre>
+							<p><strong>See also</strong> <a href="globals.html#rfindindex">rfindIndex</a>.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="foreach" class="tsd-anchor"></a>
+					<h3>for<wbr>Each</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">for<wbr>Each&lt;T, U&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, fromIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, wrap<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">U</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phosphorjs/phosphor-arrays/blob/HEAD/src/index.ts#L49">index.ts:49</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Execute a callback for each element in an array.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+								<li>
+									<h4>U</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The array of values to iterate.</p>
+									</div>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The callback to invoke for the array elements.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">U</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>value: <span class="tsd-signature-type">T</span></h5>
+														</li>
+														<li>
+															<h5>index: <span class="tsd-signature-type">number</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">U</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> fromIndex: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The starting index for iteration.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> wrap: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Whether iteration wraps around at the end of the array.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">U</span></h4>
+							<p>The first value returned by <code>callback</code> which is not
+								equal to <code>undefined</code>, or <code>undefined</code> if the callback does
+							not return a value or if the start index is out of range.</p>
+							<h4 id="notes">Notes</h4>
+							<p>It is not safe to modify the size of the array while iterating.</p>
+							<h4 id="example">Example</h4>
+							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">logger</span>(<span class="hljs-params">value: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">void</span> </span>{
+  <span class="hljs-built_in">console</span>.log(value);
+}
+
+<span class="hljs-keyword">var</span> data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+arrays.forEach(data, logger);           <span class="hljs-comment">// logs 1, 2, 3, 4</span>
+arrays.forEach(data, logger, <span class="hljs-number">2</span>);        <span class="hljs-comment">// logs 3, 4</span>
+arrays.forEach(data, logger, <span class="hljs-number">2</span>, <span class="hljs-literal">true</span>);  <span class="hljs-comment">// logs 3, 4, 1, 2</span>
+arrays.forEach(data, (v, i) =&gt; {        <span class="hljs-comment">// 2</span>
+  <span class="hljs-keyword">if</span> (v === <span class="hljs-number">3</span>) <span class="hljs-keyword">return</span> i;
+});
+</code></pre>
+							<p><strong>See also</strong> <a href="globals.html#rforeach">rforEach</a></p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="insert" class="tsd-anchor"></a>
+					<h3>insert</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">insert&lt;T&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phosphorjs/phosphor-arrays/blob/HEAD/src/index.ts#L346">index.ts:346</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Insert an element into an array at a specified index.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The array of values to modify.</p>
+									</div>
+								</li>
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The index at which to insert the value. This value
+										is clamped to the bounds of the array.</p>
+									</div>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">T</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The value to insert into the array.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>The index at which the value was inserted.</p>
+							<h4 id="example">Example</h4>
+							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
+
+<span class="hljs-keyword">var</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+arrays.insert(data, <span class="hljs-number">0</span>, <span class="hljs-number">12</span>);  <span class="hljs-comment">// 0</span>
+arrays.insert(data, <span class="hljs-number">3</span>, <span class="hljs-number">42</span>);  <span class="hljs-comment">// 3</span>
+arrays.insert(data, -<span class="hljs-number">9</span>, <span class="hljs-number">9</span>);  <span class="hljs-comment">// 0</span>
+arrays.insert(data, <span class="hljs-number">12</span>, <span class="hljs-number">8</span>);  <span class="hljs-comment">// 8</span>
+<span class="hljs-built_in">console</span>.log(data);           <span class="hljs-comment">// [9, 12, 0, 1, 42, 2, 3, 4, 8]</span>
+</code></pre>
+							<p><strong>See also</strong> <a href="globals.html#removeat">removeAt</a> and <a href="globals.html#remove">remove</a></p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="lowerbound" class="tsd-anchor"></a>
+					<h3>lower<wbr>Bound</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">lower<wbr>Bound&lt;T, U&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">U</span>, cmp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phosphorjs/phosphor-arrays/blob/HEAD/src/index.ts#L608">index.ts:608</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Using a binary search, find the index of the first element in an
+									array which compares <code>&gt;=</code> to a value.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+								<li>
+									<h4>U</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The array of values to be searched. It must be sorted
+										in ascending order.</p>
+									</div>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">U</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The value to locate in the array.</p>
+									</div>
+								</li>
+								<li>
+									<h5>cmp: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The comparison function which returns <code>true</code> if an
+										array element is less than the given value.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>element: <span class="tsd-signature-type">T</span></h5>
+														</li>
+														<li>
+															<h5>value: <span class="tsd-signature-type">U</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>The index of the first element in <code>array</code> which compares
+							<code>&gt;=</code> to <code>value</code>, or <code>array.length</code> if there is no such element.</p>
+							<h4 id="notes">Notes</h4>
+							<p>It is not safe for the comparison function to modify the array.</p>
+							<h4 id="example">Example</h4>
+							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">numberCmp</span>(<span class="hljs-params">a: <span class="hljs-built_in">number</span>, b: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">boolean</span> </span>{
+  <span class="hljs-keyword">return</span> a &lt; b;
+}
+
+<span class="hljs-keyword">var</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">7</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>];
+arrays.lowerBound(data, <span class="hljs-number">0</span>, numberCmp);   <span class="hljs-comment">// 0</span>
+arrays.lowerBound(data, <span class="hljs-number">6</span>, numberCmp);   <span class="hljs-comment">// 3</span>
+arrays.lowerBound(data, <span class="hljs-number">7</span>, numberCmp);   <span class="hljs-comment">// 3</span>
+arrays.lowerBound(data, -<span class="hljs-number">1</span>, numberCmp);  <span class="hljs-comment">// 0</span>
+arrays.lowerBound(data, <span class="hljs-number">10</span>, numberCmp);  <span class="hljs-comment">// 6</span>
+</code></pre>
+							<p><strong>See also</strong> <a href="globals.html#upperbound">upperBound</a></p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="move" class="tsd-anchor"></a>
+					<h3>move</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">move&lt;T&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, fromIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, toIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phosphorjs/phosphor-arrays/blob/HEAD/src/index.ts#L381">index.ts:381</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Move an element in an array from one index to another.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The array of values to modify.</p>
+									</div>
+								</li>
+								<li>
+									<h5>fromIndex: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The index of the element to move.</p>
+									</div>
+								</li>
+								<li>
+									<h5>toIndex: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The target index of the element.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p><code>true</code> if the element was moved, or <code>false</code> if either
+							index is out of range.</p>
+							<h4 id="example">Example</h4>
+							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
+
+<span class="hljs-keyword">var</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+arrays.move(data, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>);   <span class="hljs-comment">// true</span>
+arrays.move(data, -<span class="hljs-number">1</span>, <span class="hljs-number">0</span>);  <span class="hljs-comment">// false</span>
+arrays.move(data, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>);   <span class="hljs-comment">// true</span>
+arrays.move(data, <span class="hljs-number">10</span>, <span class="hljs-number">0</span>);  <span class="hljs-comment">// false</span>
+<span class="hljs-built_in">console</span>.log(data);         <span class="hljs-comment">// [0, 2, 4, 1, 3]</span>
+</code></pre>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="remove" class="tsd-anchor"></a>
+					<h3>remove</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">remove&lt;T&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phosphorjs/phosphor-arrays/blob/HEAD/src/index.ts#L467">index.ts:467</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Remove the first occurrence of a value from an array.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The array of values to modify.</p>
+									</div>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">T</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The value to remove from the array.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>The index where the value was located, or <code>-1</code> if the
+							value is not the array.</p>
+							<h4 id="example">Example</h4>
+							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
+
+<span class="hljs-keyword">var</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+arrays.remove(data, <span class="hljs-number">1</span>);  <span class="hljs-comment">// 1</span>
+arrays.remove(data, <span class="hljs-number">3</span>);  <span class="hljs-comment">// 2</span>
+arrays.remove(data, <span class="hljs-number">7</span>);  <span class="hljs-comment">// -1</span>
+<span class="hljs-built_in">console</span>.log(data);       <span class="hljs-comment">// [0, 2, 4]</span>
+</code></pre>
+							<p><strong>See also</strong> <a href="globals.html#removeat">removeAt</a> and <a href="globals.html#insert">insert</a></p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="removeat" class="tsd-anchor"></a>
+					<h3>remove<wbr>At</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>At&lt;T&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phosphorjs/phosphor-arrays/blob/HEAD/src/index.ts#L429">index.ts:429</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Remove an element from an array at a specified index.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The array of values to modify.</p>
+									</div>
+								</li>
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The index of the element to remove.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+							<p>The removed value, or <code>undefined</code> if the index is out
+							of range.</p>
+							<h4 id="example">Example</h4>
+							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
+
+<span class="hljs-keyword">var</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+arrays.removeAt(data, <span class="hljs-number">1</span>);   <span class="hljs-comment">// 1</span>
+arrays.removeAt(data, <span class="hljs-number">3</span>);   <span class="hljs-comment">// 4</span>
+arrays.removeAt(data, <span class="hljs-number">10</span>);  <span class="hljs-comment">// undefined</span>
+<span class="hljs-built_in">console</span>.log(data);          <span class="hljs-comment">// [0, 2, 3]</span>
+</code></pre>
+							<p><strong>See also</strong> <a href="globals.html#remove">remove</a> and <a href="globals.html#insert">insert</a></p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="reverse" class="tsd-anchor"></a>
+					<h3>reverse</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">reverse&lt;T&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, fromIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, toIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phosphorjs/phosphor-arrays/blob/HEAD/src/index.ts#L509">index.ts:509</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Reverse an array in-place subject to an optional range.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The array to reverse.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> fromIndex: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The index of the first element of the range.
+										This value will be clamped to the array bounds.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> toIndex: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;array.length</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The index of the last element of the range.
+										This value will be clamped to the array bounds.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>A reference to the original array.</p>
+							<h4 id="example">Example</h4>
+							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
+
+<span class="hljs-keyword">var</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+arrays.reverse(data, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>);    <span class="hljs-comment">// [0, 3, 2, 1, 4]</span>
+arrays.reverse(data, <span class="hljs-number">3</span>);       <span class="hljs-comment">// [0, 3, 2, 4, 1]</span>
+arrays.reverse(data);          <span class="hljs-comment">// [1, 4, 2, 3, 0]</span>
+</code></pre>
+							<p><strong>See also</strong> <a href="globals.html#rotate">rotate</a></p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="rfind" class="tsd-anchor"></a>
+					<h3>rfind</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">rfind&lt;T&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, pred<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, fromIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, wrap<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phosphorjs/phosphor-arrays/blob/HEAD/src/index.ts#L313">index.ts:313</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Find the last value which matches a predicate.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The array of values to be searched.</p>
+									</div>
+								</li>
+								<li>
+									<h5>pred: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The predicate function to apply to the values.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>value: <span class="tsd-signature-type">T</span></h5>
+														</li>
+														<li>
+															<h5>index: <span class="tsd-signature-type">number</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fromIndex: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The starting index of the search.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> wrap: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Whether the search wraps around at the front of the array.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+							<p>The last matching value, or <code>undefined</code> if no value matches
+							the predicate or if the start index is out of range.</p>
+							<h4 id="notes">Notes</h4>
+							<p>The range of visited indices is set before the first invocation of
+							<code>pred</code>. It is not safe for <code>pred</code> to change the length of <code>array</code>.</p>
+							<h4 id="example">Example</h4>
+							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isEven</span>(<span class="hljs-params">value: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">boolean</span> </span>{
+  <span class="hljs-keyword">return</span> value % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-keyword">var</span> data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>];
+arrays.rfind(data, isEven);           <span class="hljs-comment">// 2</span>
+arrays.rfind(data, isEven, <span class="hljs-number">4</span>);        <span class="hljs-comment">// 4</span>
+arrays.rfind(data, isEven, <span class="hljs-number">0</span>);        <span class="hljs-comment">// undefined</span>
+arrays.rfind(data, isEven, <span class="hljs-number">0</span>, <span class="hljs-literal">true</span>);  <span class="hljs-comment">// 2</span>
+</code></pre>
+							<p><strong>See also</strong> <a href="globals.html#find">find</a>.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="rfindindex" class="tsd-anchor"></a>
+					<h3>rfind<wbr>Index</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">rfind<wbr>Index&lt;T&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, pred<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, fromIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, wrap<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phosphorjs/phosphor-arrays/blob/HEAD/src/index.ts#L217">index.ts:217</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Find the index of the last value which matches a predicate.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The array of values to be searched.</p>
+									</div>
+								</li>
+								<li>
+									<h5>pred: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The predicate function to apply to the values.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>value: <span class="tsd-signature-type">T</span></h5>
+														</li>
+														<li>
+															<h5>index: <span class="tsd-signature-type">number</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> fromIndex: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;array.length - 1</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The starting index of the search.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> wrap: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Whether the search wraps around at the front of the array.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>The index of the last matching value, or <code>-1</code> if no value
+							matches the predicate or if the start index is out of range.</p>
+							<h4 id="notes">Notes</h4>
+							<p>It is not safe to modify the size of the array while iterating.</p>
+							<h4 id="example">Example</h4>
+							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isEven</span>(<span class="hljs-params">value: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">boolean</span> </span>{
+  <span class="hljs-keyword">return</span> value % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-keyword">var</span> data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>];
+arrays.rfindIndex(data, isEven);           <span class="hljs-comment">// 5</span>
+arrays.rfindIndex(data, isEven, <span class="hljs-number">4</span>);        <span class="hljs-comment">// 3</span>
+arrays.rfindIndex(data, isEven, <span class="hljs-number">0</span>);        <span class="hljs-comment">// -1</span>
+arrays.rfindIndex(data, isEven, <span class="hljs-number">0</span>, <span class="hljs-literal">true</span>);  <span class="hljs-comment">// 5</span>
+</code></pre>
+							<p><strong>See also</strong> <a href="globals.html#findindex">findIndex</a>.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="rforeach" class="tsd-anchor"></a>
+					<h3>rfor<wbr>Each</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">rfor<wbr>Each&lt;T, U&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, fromIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, wrap<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">U</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phosphorjs/phosphor-arrays/blob/HEAD/src/index.ts#L107">index.ts:107</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Execute a callback for each element in an array, in reverse.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+								<li>
+									<h4>U</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The array of values to iterate.</p>
+									</div>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The callback to invoke for the array elements.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">U</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>value: <span class="tsd-signature-type">T</span></h5>
+														</li>
+														<li>
+															<h5>index: <span class="tsd-signature-type">number</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">U</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> fromIndex: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;array.length - 1</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The starting index for iteration.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> wrap: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Whether iteration wraps around at the end of the array.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">U</span></h4>
+							<p>The first value returned by <code>callback</code> which is not
+								equal to <code>undefined</code>, or <code>undefined</code> if the callback does
+							not return a value or if the start index is out of range.</p>
+							<h4 id="notes">Notes</h4>
+							<p>It is not safe to modify the size of the array while iterating.</p>
+							<h4 id="example">Example</h4>
+							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">logger</span>(<span class="hljs-params">value: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">void</span> </span>{
+  <span class="hljs-built_in">console</span>.log(value);
+}
+
+<span class="hljs-keyword">var</span> data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+arrays.rforEach(data, logger);           <span class="hljs-comment">// logs 4, 3, 2, 1</span>
+arrays.rforEach(data, logger, <span class="hljs-number">2</span>);        <span class="hljs-comment">// logs 3, 2, 1</span>
+arrays.rforEach(data, logger, <span class="hljs-number">2</span>, <span class="hljs-literal">true</span>);  <span class="hljs-comment">// logs 3, 2, 1, 4</span>
+arrays.rforEach(data, (v, i) =&gt; {        <span class="hljs-comment">// 2</span>
+  <span class="hljs-keyword">if</span> (v === <span class="hljs-number">3</span>) <span class="hljs-keyword">return</span> i;
+});
+</code></pre>
+							<p><strong>See also</strong> <a href="globals.html#foreach">forEach</a></p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="rotate" class="tsd-anchor"></a>
+					<h3>rotate</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">rotate&lt;T&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, delta<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phosphorjs/phosphor-arrays/blob/HEAD/src/index.ts#L550">index.ts:550</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Rotate the elements of an array by a positive or negative delta.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The array to rotate.</p>
+									</div>
+								</li>
+								<li>
+									<h5>delta: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The amount of rotation to apply to the elements. A
+											positive delta will shift the elements to the left. A negative
+										delta will shift the elements to the right.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>A reference to the original array.</p>
+							<h4 id="notes">Notes</h4>
+							<p>This executes in <code>O(n)</code> time and <code>O(1)</code> space.</p>
+							<h4 id="example">Example</h4>
+							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
+
+<span class="hljs-keyword">var</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+arrays.rotate(data, <span class="hljs-number">2</span>);    <span class="hljs-comment">// [2, 3, 4, 0, 1]</span>
+arrays.rotate(data, -<span class="hljs-number">2</span>);   <span class="hljs-comment">// [0, 1, 2, 3, 4]</span>
+arrays.rotate(data, <span class="hljs-number">10</span>);   <span class="hljs-comment">// [0, 1, 2, 3, 4]</span>
+arrays.rotate(data, <span class="hljs-number">9</span>);    <span class="hljs-comment">// [4, 0, 1, 2, 3]</span>
+</code></pre>
+							<p><strong>See also</strong> <a href="globals.html#reverse">reverse</a></p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="upperbound" class="tsd-anchor"></a>
+					<h3>upper<wbr>Bound</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">upper<wbr>Bound&lt;T, U&gt;<span class="tsd-signature-symbol">(</span>array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">U</span>, cmp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phosphorjs/phosphor-arrays/blob/HEAD/src/index.ts#L664">index.ts:664</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Using a binary search, find the index of the first element in an
+									array which compares <code>&gt;</code> than a value.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+								<li>
+									<h4>U</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>array: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The array of values to be searched. It must be sorted
+										in ascending order.</p>
+									</div>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">U</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The value to locate in the array.</p>
+									</div>
+								</li>
+								<li>
+									<h5>cmp: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The comparison function which returns <code>true</code> if the
+										the given value is less than an array element.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">U</span>, element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>value: <span class="tsd-signature-type">U</span></h5>
+														</li>
+														<li>
+															<h5>element: <span class="tsd-signature-type">T</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>The index of the first element in <code>array</code> which compares
+							<code>&gt;</code> than <code>value</code>, or <code>array.length</code> if there is no such element.</p>
+							<h4 id="notes">Notes</h4>
+							<p>It is not safe for the comparison function to modify the array.</p>
+							<h4 id="example">Example</h4>
+							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">numberCmp</span>(<span class="hljs-params">a: <span class="hljs-built_in">number</span>, b: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">number</span> </span>{
+  <span class="hljs-keyword">return</span> a &lt; b;
+}
+
+<span class="hljs-keyword">var</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">7</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>];
+arrays.upperBound(data, <span class="hljs-number">0</span>, numberCmp);   <span class="hljs-comment">// 1</span>
+arrays.upperBound(data, <span class="hljs-number">6</span>, numberCmp);   <span class="hljs-comment">// 3</span>
+arrays.upperBound(data, <span class="hljs-number">7</span>, numberCmp);   <span class="hljs-comment">// 5</span>
+arrays.upperBound(data, -<span class="hljs-number">1</span>, numberCmp);  <span class="hljs-comment">// 0</span>
+arrays.upperBound(data, <span class="hljs-number">10</span>, numberCmp);  <span class="hljs-comment">// 6</span>
+</code></pre>
+							<p><strong>See also</strong> <a href="globals.html#lowerbound">lowerBound</a></p>
+						</li>
+					</ul>
+				</section>
+			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
@@ -75,6 +1223,48 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#find" class="tsd-kind-icon">find</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#findindex" class="tsd-kind-icon">find<wbr>Index</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#foreach" class="tsd-kind-icon">for<wbr>Each</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#insert" class="tsd-kind-icon">insert</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#lowerbound" class="tsd-kind-icon">lower<wbr>Bound</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#move" class="tsd-kind-icon">move</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#remove" class="tsd-kind-icon">remove</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#removeat" class="tsd-kind-icon">remove<wbr>At</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#reverse" class="tsd-kind-icon">reverse</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#rfind" class="tsd-kind-icon">rfind</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#rfindindex" class="tsd-kind-icon">rfind<wbr>Index</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#rforeach" class="tsd-kind-icon">rfor<wbr>Each</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#rotate" class="tsd-kind-icon">rotate</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#upperbound" class="tsd-kind-icon">upper<wbr>Bound</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
