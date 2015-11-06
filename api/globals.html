@@ -176,7 +176,7 @@
   <span class="hljs-keyword">return</span> value % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>;
 }
 
-<span class="hljs-keyword">var</span> data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>];
+<span class="hljs-keyword">let</span> data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>];
 arrays.find(data, isEven);           <span class="hljs-comment">// 2</span>
 arrays.find(data, isEven, <span class="hljs-number">4</span>);        <span class="hljs-comment">// 2</span>
 arrays.find(data, isEven, <span class="hljs-number">6</span>);        <span class="hljs-comment">// undefined</span>
@@ -270,7 +270,7 @@ arrays.find(data, isEven, <span class="hljs-number">6</span>, <span class="hljs-
   <span class="hljs-keyword">return</span> value % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>;
 }
 
-<span class="hljs-keyword">var</span> data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>];
+<span class="hljs-keyword">let</span> data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>];
 arrays.findIndex(data, isEven);           <span class="hljs-comment">// 1</span>
 arrays.findIndex(data, isEven, <span class="hljs-number">4</span>);        <span class="hljs-comment">// 5</span>
 arrays.findIndex(data, isEven, <span class="hljs-number">6</span>);        <span class="hljs-comment">// -1</span>
@@ -368,7 +368,7 @@ arrays.findIndex(data, isEven, <span class="hljs-number">6</span>, <span class="
   <span class="hljs-built_in">console</span>.log(value);
 }
 
-<span class="hljs-keyword">var</span> data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+<span class="hljs-keyword">let</span> data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
 arrays.forEach(data, logger);           <span class="hljs-comment">// logs 1, 2, 3, 4</span>
 arrays.forEach(data, logger, <span class="hljs-number">2</span>);        <span class="hljs-comment">// logs 3, 4</span>
 arrays.forEach(data, logger, <span class="hljs-number">2</span>, <span class="hljs-literal">true</span>);  <span class="hljs-comment">// logs 3, 4, 1, 2</span>
@@ -431,7 +431,7 @@ arrays.forEach(data, (v, i) =&gt; {        <span class="hljs-comment">// 2</span
 							<h4 id="example">Example</h4>
 							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
 
-<span class="hljs-keyword">var</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+<span class="hljs-keyword">let</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
 arrays.insert(data, <span class="hljs-number">0</span>, <span class="hljs-number">12</span>);  <span class="hljs-comment">// 0</span>
 arrays.insert(data, <span class="hljs-number">3</span>, <span class="hljs-number">42</span>);  <span class="hljs-comment">// 3</span>
 arrays.insert(data, -<span class="hljs-number">9</span>, <span class="hljs-number">9</span>);  <span class="hljs-comment">// 0</span>
@@ -526,7 +526,7 @@ arrays.insert(data, <span class="hljs-number">12</span>, <span class="hljs-numbe
   <span class="hljs-keyword">return</span> a &lt; b;
 }
 
-<span class="hljs-keyword">var</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">7</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>];
+<span class="hljs-keyword">let</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">7</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>];
 arrays.lowerBound(data, <span class="hljs-number">0</span>, numberCmp);   <span class="hljs-comment">// 0</span>
 arrays.lowerBound(data, <span class="hljs-number">6</span>, numberCmp);   <span class="hljs-comment">// 3</span>
 arrays.lowerBound(data, <span class="hljs-number">7</span>, numberCmp);   <span class="hljs-comment">// 3</span>
@@ -588,7 +588,7 @@ arrays.lowerBound(data, <span class="hljs-number">10</span>, numberCmp);  <span 
 							<h4 id="example">Example</h4>
 							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
 
-<span class="hljs-keyword">var</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+<span class="hljs-keyword">let</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
 arrays.move(data, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>);   <span class="hljs-comment">// true</span>
 arrays.move(data, -<span class="hljs-number">1</span>, <span class="hljs-number">0</span>);  <span class="hljs-comment">// false</span>
 arrays.move(data, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>);   <span class="hljs-comment">// true</span>
@@ -643,7 +643,7 @@ arrays.move(data, <span class="hljs-number">10</span>, <span class="hljs-number"
 							<h4 id="example">Example</h4>
 							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
 
-<span class="hljs-keyword">var</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+<span class="hljs-keyword">let</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
 arrays.remove(data, <span class="hljs-number">1</span>);  <span class="hljs-comment">// 1</span>
 arrays.remove(data, <span class="hljs-number">3</span>);  <span class="hljs-comment">// 2</span>
 arrays.remove(data, <span class="hljs-number">7</span>);  <span class="hljs-comment">// -1</span>
@@ -698,7 +698,7 @@ arrays.remove(data, <span class="hljs-number">7</span>);  <span class="hljs-comm
 							<h4 id="example">Example</h4>
 							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
 
-<span class="hljs-keyword">var</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+<span class="hljs-keyword">let</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
 arrays.removeAt(data, <span class="hljs-number">1</span>);   <span class="hljs-comment">// 1</span>
 arrays.removeAt(data, <span class="hljs-number">3</span>);   <span class="hljs-comment">// 4</span>
 arrays.removeAt(data, <span class="hljs-number">10</span>);  <span class="hljs-comment">// undefined</span>
@@ -760,7 +760,7 @@ arrays.removeAt(data, <span class="hljs-number">10</span>);  <span class="hljs-c
 							<h4 id="example">Example</h4>
 							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
 
-<span class="hljs-keyword">var</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+<span class="hljs-keyword">let</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
 arrays.reverse(data, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>);    <span class="hljs-comment">// [0, 3, 2, 1, 4]</span>
 arrays.reverse(data, <span class="hljs-number">3</span>);       <span class="hljs-comment">// [0, 3, 2, 4, 1]</span>
 arrays.reverse(data);          <span class="hljs-comment">// [1, 4, 2, 3, 0]</span>
@@ -854,7 +854,7 @@ arrays.reverse(data);          <span class="hljs-comment">// [1, 4, 2, 3, 0]</sp
   <span class="hljs-keyword">return</span> value % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>;
 }
 
-<span class="hljs-keyword">var</span> data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>];
+<span class="hljs-keyword">let</span> data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>];
 arrays.rfind(data, isEven);           <span class="hljs-comment">// 2</span>
 arrays.rfind(data, isEven, <span class="hljs-number">4</span>);        <span class="hljs-comment">// 4</span>
 arrays.rfind(data, isEven, <span class="hljs-number">0</span>);        <span class="hljs-comment">// undefined</span>
@@ -948,7 +948,7 @@ arrays.rfind(data, isEven, <span class="hljs-number">0</span>, <span class="hljs
   <span class="hljs-keyword">return</span> value % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>;
 }
 
-<span class="hljs-keyword">var</span> data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>];
+<span class="hljs-keyword">let</span> data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>];
 arrays.rfindIndex(data, isEven);           <span class="hljs-comment">// 5</span>
 arrays.rfindIndex(data, isEven, <span class="hljs-number">4</span>);        <span class="hljs-comment">// 3</span>
 arrays.rfindIndex(data, isEven, <span class="hljs-number">0</span>);        <span class="hljs-comment">// -1</span>
@@ -1046,7 +1046,7 @@ arrays.rfindIndex(data, isEven, <span class="hljs-number">0</span>, <span class=
   <span class="hljs-built_in">console</span>.log(value);
 }
 
-<span class="hljs-keyword">var</span> data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+<span class="hljs-keyword">let</span> data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
 arrays.rforEach(data, logger);           <span class="hljs-comment">// logs 4, 3, 2, 1</span>
 arrays.rforEach(data, logger, <span class="hljs-number">2</span>);        <span class="hljs-comment">// logs 3, 2, 1</span>
 arrays.rforEach(data, logger, <span class="hljs-number">2</span>, <span class="hljs-literal">true</span>);  <span class="hljs-comment">// logs 3, 2, 1, 4</span>
@@ -1106,7 +1106,7 @@ arrays.rforEach(data, (v, i) =&gt; {        <span class="hljs-comment">// 2</spa
 							<h4 id="example">Example</h4>
 							<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * as arrays from <span class="hljs-string">'phosphor-arrays'</span>;
 
-<span class="hljs-keyword">var</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+<span class="hljs-keyword">let</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
 arrays.rotate(data, <span class="hljs-number">2</span>);    <span class="hljs-comment">// [2, 3, 4, 0, 1]</span>
 arrays.rotate(data, -<span class="hljs-number">2</span>);   <span class="hljs-comment">// [0, 1, 2, 3, 4]</span>
 arrays.rotate(data, <span class="hljs-number">10</span>);   <span class="hljs-comment">// [0, 1, 2, 3, 4]</span>
@@ -1200,7 +1200,7 @@ arrays.rotate(data, <span class="hljs-number">9</span>);    <span class="hljs-co
   <span class="hljs-keyword">return</span> a &lt; b;
 }
 
-<span class="hljs-keyword">var</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">7</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>];
+<span class="hljs-keyword">let</span> data = [<span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">7</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>];
 arrays.upperBound(data, <span class="hljs-number">0</span>, numberCmp);   <span class="hljs-comment">// 1</span>
 arrays.upperBound(data, <span class="hljs-number">6</span>, numberCmp);   <span class="hljs-comment">// 3</span>
 arrays.upperBound(data, <span class="hljs-number">7</span>, numberCmp);   <span class="hljs-comment">// 5</span>
