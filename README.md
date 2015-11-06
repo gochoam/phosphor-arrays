@@ -92,7 +92,8 @@ Usage Examples
 omit the type declarations when using a language other than TypeScript.
 
 ```typescript
-import * as arrays from 'phosphor-arrays';
+import * as arrays
+  from 'phosphor-arrays';
 
 
 function logger(value: number): void {
