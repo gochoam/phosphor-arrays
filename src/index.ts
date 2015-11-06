@@ -34,7 +34,7 @@
  *   console.log(value);
  * }
  *
- * var data = [1, 2, 3, 4];
+ * let data = [1, 2, 3, 4];
  * arrays.forEach(data, logger);           // logs 1, 2, 3, 4
  * arrays.forEach(data, logger, 2);        // logs 3, 4
  * arrays.forEach(data, logger, 2, true);  // logs 3, 4, 1, 2
@@ -47,19 +47,19 @@
  */
 export
 function forEach<T, U>(array: T[], callback: (value: T, index: number) => U, fromIndex = 0, wrap = false): U {
-  var start = fromIndex | 0;
+  let start = fromIndex | 0;
   if (start < 0 || start >= array.length) {
     return void 0;
   }
   if (wrap) {
-    for (var i = 0, n = array.length; i < n; ++i) {
-      var j = (start + i) % n;
-      var result = callback(array[j], j);
+    for (let i = 0, n = array.length; i < n; ++i) {
+      let j = (start + i) % n;
+      let result = callback(array[j], j);
       if (result !== void 0) return result;
     }
   } else {
-    for (var i = start, n = array.length; i < n; ++i) {
-      var result = callback(array[i], i);
+    for (let i = start, n = array.length; i < n; ++i) {
+      let result = callback(array[i], i);
       if (result !== void 0) return result;
     }
   }
@@ -93,7 +93,7 @@ function forEach<T, U>(array: T[], callback: (value: T, index: number) => U, fro
  *   console.log(value);
  * }
  *
- * var data = [1, 2, 3, 4];
+ * let data = [1, 2, 3, 4];
  * arrays.rforEach(data, logger);           // logs 4, 3, 2, 1
  * arrays.rforEach(data, logger, 2);        // logs 3, 2, 1
  * arrays.rforEach(data, logger, 2, true);  // logs 3, 2, 1, 4
@@ -105,19 +105,19 @@ function forEach<T, U>(array: T[], callback: (value: T, index: number) => U, fro
  */
 export
 function rforEach<T, U>(array: T[], callback: (value: T, index: number) => U, fromIndex = array.length - 1, wrap = false): U {
-  var start = fromIndex | 0;
+  let start = fromIndex | 0;
   if (start < 0 || start >= array.length) {
     return void 0;
   }
   if (wrap) {
-    for (var i = 0, n = array.length; i < n; ++i) {
-      var j = (start - i + n) % n;
-      var result = callback(array[j], j);
+    for (let i = 0, n = array.length; i < n; ++i) {
+      let j = (start - i + n) % n;
+      let result = callback(array[j], j);
       if (result !== void 0) return result;
     }
   } else {
-    for (var i = start; i >= 0; --i) {
-      var result = callback(array[i], i);
+    for (let i = start; i >= 0; --i) {
+      let result = callback(array[i], i);
       if (result !== void 0) return result;
     }
   }
@@ -150,7 +150,7 @@ function rforEach<T, U>(array: T[], callback: (value: T, index: number) => U, fr
  *   return value % 2 === 0;
  * }
  *
- * var data = [1, 2, 3, 4, 3, 2, 1];
+ * let data = [1, 2, 3, 4, 3, 2, 1];
  * arrays.findIndex(data, isEven);           // 1
  * arrays.findIndex(data, isEven, 4);        // 5
  * arrays.findIndex(data, isEven, 6);        // -1
@@ -161,17 +161,17 @@ function rforEach<T, U>(array: T[], callback: (value: T, index: number) => U, fr
  */
 export
 function findIndex<T>(array: T[], pred: (value: T, index: number) => boolean, fromIndex = 0, wrap = false): number {
-  var start = fromIndex | 0;
+  let start = fromIndex | 0;
   if (start < 0 || start >= array.length) {
     return -1;
   }
   if (wrap) {
-    for (var i = 0, n = array.length; i < n; ++i) {
-      var j = (start + i) % n;
+    for (let i = 0, n = array.length; i < n; ++i) {
+      let j = (start + i) % n;
       if (pred(array[j], j)) return j;
     }
   } else {
-    for (var i = start, n = array.length; i < n; ++i) {
+    for (let i = start, n = array.length; i < n; ++i) {
       if (pred(array[i], i)) return i;
     }
   }
@@ -204,7 +204,7 @@ function findIndex<T>(array: T[], pred: (value: T, index: number) => boolean, fr
  *   return value % 2 === 0;
  * }
  *
- * var data = [1, 2, 3, 4, 3, 2, 1];
+ * let data = [1, 2, 3, 4, 3, 2, 1];
  * arrays.rfindIndex(data, isEven);           // 5
  * arrays.rfindIndex(data, isEven, 4);        // 3
  * arrays.rfindIndex(data, isEven, 0);        // -1
@@ -215,17 +215,17 @@ function findIndex<T>(array: T[], pred: (value: T, index: number) => boolean, fr
  */
 export
 function rfindIndex<T>(array: T[], pred: (value: T, index: number) => boolean, fromIndex = array.length - 1, wrap = false): number {
-  var start = fromIndex | 0;
+  let start = fromIndex | 0;
   if (start < 0 || start >= array.length) {
     return -1;
   }
   if (wrap) {
-    for (var i = 0, n = array.length; i < n; ++i) {
-      var j = (start - i + n) % n;
+    for (let i = 0, n = array.length; i < n; ++i) {
+      let j = (start - i + n) % n;
       if (pred(array[j], j)) return j;
     }
   } else {
-    for (var i = start; i >= 0; --i) {
+    for (let i = start; i >= 0; --i) {
       if (pred(array[i], i)) return i;
     }
   }
@@ -258,7 +258,7 @@ function rfindIndex<T>(array: T[], pred: (value: T, index: number) => boolean, f
  *   return value % 2 === 0;
  * }
  *
- * var data = [1, 2, 3, 4, 3, 2, 1];
+ * let data = [1, 2, 3, 4, 3, 2, 1];
  * arrays.find(data, isEven);           // 2
  * arrays.find(data, isEven, 4);        // 2
  * arrays.find(data, isEven, 6);        // undefined
@@ -269,7 +269,7 @@ function rfindIndex<T>(array: T[], pred: (value: T, index: number) => boolean, f
  */
 export
 function find<T>(array: T[], pred: (value: T, index: number) => boolean, fromIndex?: number, wrap?: boolean): T {
-  var i = findIndex(array, pred, fromIndex, wrap);
+  let i = findIndex(array, pred, fromIndex, wrap);
   return i !== -1 ? array[i] : void 0;
 }
 
@@ -300,7 +300,7 @@ function find<T>(array: T[], pred: (value: T, index: number) => boolean, fromInd
  *   return value % 2 === 0;
  * }
  *
- * var data = [1, 2, 3, 4, 3, 2, 1];
+ * let data = [1, 2, 3, 4, 3, 2, 1];
  * arrays.rfind(data, isEven);           // 2
  * arrays.rfind(data, isEven, 4);        // 4
  * arrays.rfind(data, isEven, 0);        // undefined
@@ -311,7 +311,7 @@ function find<T>(array: T[], pred: (value: T, index: number) => boolean, fromInd
  */
 export
 function rfind<T>(array: T[], pred: (value: T, index: number) => boolean, fromIndex?: number, wrap?: boolean): T {
-  var i = rfindIndex(array, pred, fromIndex, wrap);
+  let i = rfindIndex(array, pred, fromIndex, wrap);
   return i !== -1 ? array[i] : void 0;
 }
 
@@ -332,7 +332,7 @@ function rfind<T>(array: T[], pred: (value: T, index: number) => boolean, fromIn
  * ```typescript
  * import * as arrays from 'phosphor-arrays';
  *
- * var data = [0, 1, 2, 3, 4];
+ * let data = [0, 1, 2, 3, 4];
  * arrays.insert(data, 0, 12);  // 0
  * arrays.insert(data, 3, 42);  // 3
  * arrays.insert(data, -9, 9);  // 0
@@ -344,8 +344,8 @@ function rfind<T>(array: T[], pred: (value: T, index: number) => boolean, fromIn
  */
 export
 function insert<T>(array: T[], index: number, value: T): number {
-  var j = Math.max(0, Math.min(index | 0, array.length));
-  for (var i = array.length; i > j; --i) {
+  let j = Math.max(0, Math.min(index | 0, array.length));
+  for (let i = array.length; i > j; --i) {
     array[i] = array[i - 1];
   }
   array[j] = value;
@@ -369,7 +369,7 @@ function insert<T>(array: T[], index: number, value: T): number {
  * ```typescript
  * import * as arrays from 'phosphor-arrays';
  *
- * var data = [0, 1, 2, 3, 4];
+ * let data = [0, 1, 2, 3, 4];
  * arrays.move(data, 1, 2);   // true
  * arrays.move(data, -1, 0);  // false
  * arrays.move(data, 4, 2);   // true
@@ -379,21 +379,21 @@ function insert<T>(array: T[], index: number, value: T): number {
  */
 export
 function move<T>(array: T[], fromIndex: number, toIndex: number): boolean {
-  var j = fromIndex | 0;
+  let j = fromIndex | 0;
   if (j < 0 || j >= array.length) {
     return false;
   }
-  var k = toIndex | 0;
+  let k = toIndex | 0;
   if (k < 0 || k >= array.length) {
     return false;
   }
-  var value = array[j];
+  let value = array[j];
   if (j > k) {
-    for (var i = j; i > k; --i) {
+    for (let i = j; i > k; --i) {
       array[i] = array[i - 1];
     }
   } else if (j < k) {
-    for (var i = j; i < k; ++i) {
+    for (let i = j; i < k; ++i) {
       array[i] = array[i + 1];
     }
   }
@@ -416,7 +416,7 @@ function move<T>(array: T[], fromIndex: number, toIndex: number): boolean {
  * ```typescript
  * import * as arrays from 'phosphor-arrays';
  *
- * var data = [0, 1, 2, 3, 4];
+ * let data = [0, 1, 2, 3, 4];
  * arrays.removeAt(data, 1);   // 1
  * arrays.removeAt(data, 3);   // 4
  * arrays.removeAt(data, 10);  // undefined
@@ -427,12 +427,12 @@ function move<T>(array: T[], fromIndex: number, toIndex: number): boolean {
  */
 export
 function removeAt<T>(array: T[], index: number): T {
-  var j = index | 0;
+  let j = index | 0;
   if (j < 0 || j >= array.length) {
     return void 0;
   }
-  var value = array[j];
-  for (var i = j + 1, n = array.length; i < n; ++i) {
+  let value = array[j];
+  for (let i = j + 1, n = array.length; i < n; ++i) {
     array[i - 1] = array[i];
   }
   array.length -= 1;
@@ -454,7 +454,7 @@ function removeAt<T>(array: T[], index: number): T {
  * ```typescript
  * import * as arrays from 'phosphor-arrays';
  *
- * var data = [0, 1, 2, 3, 4];
+ * let data = [0, 1, 2, 3, 4];
  * arrays.remove(data, 1);  // 1
  * arrays.remove(data, 3);  // 2
  * arrays.remove(data, 7);  // -1
@@ -465,14 +465,14 @@ function removeAt<T>(array: T[], index: number): T {
  */
 export
 function remove<T>(array: T[], value: T): number {
-  var j = -1;
-  for (var i = 0, n = array.length; i < n; ++i) {
+  let j = -1;
+  for (let i = 0, n = array.length; i < n; ++i) {
     if (array[i] === value) { j = i; break; }
   }
   if (j === -1) {
     return -1;
   }
-  for (var i = j + 1, n = array.length; i < n; ++i) {
+  for (let i = j + 1, n = array.length; i < n; ++i) {
     array[i - 1] = array[i];
   }
   array.length -= 1;
@@ -497,7 +497,7 @@ function remove<T>(array: T[], value: T): number {
  * ```typescript
  * import * as arrays from 'phosphor-arrays';
  *
- * var data = [0, 1, 2, 3, 4];
+ * let data = [0, 1, 2, 3, 4];
  * arrays.reverse(data, 1, 3);    // [0, 3, 2, 1, 4]
  * arrays.reverse(data, 3);       // [0, 3, 2, 4, 1]
  * arrays.reverse(data);          // [1, 4, 2, 3, 0]
@@ -507,11 +507,11 @@ function remove<T>(array: T[], value: T): number {
  */
 export
 function reverse<T>(array: T[], fromIndex = 0, toIndex = array.length): T[] {
-  var i = Math.max(0, Math.min(fromIndex | 0, array.length - 1));
-  var j = Math.max(0, Math.min(toIndex | 0, array.length - 1));
+  let i = Math.max(0, Math.min(fromIndex | 0, array.length - 1));
+  let j = Math.max(0, Math.min(toIndex | 0, array.length - 1));
   if (j < i) i = j + (j = i, 0);
   while (i < j) {
-    var tmpval = array[i];
+    let tmpval = array[i];
     array[i++] = array[j];
     array[j--] = tmpval;
   }
@@ -537,7 +537,7 @@ function reverse<T>(array: T[], fromIndex = 0, toIndex = array.length): T[] {
  * ```typescript
  * import * as arrays from 'phosphor-arrays';
  *
- * var data = [0, 1, 2, 3, 4];
+ * let data = [0, 1, 2, 3, 4];
  * arrays.rotate(data, 2);    // [2, 3, 4, 0, 1]
  * arrays.rotate(data, -2);   // [0, 1, 2, 3, 4]
  * arrays.rotate(data, 10);   // [0, 1, 2, 3, 4]
@@ -548,11 +548,11 @@ function reverse<T>(array: T[], fromIndex = 0, toIndex = array.length): T[] {
  */
 export
 function rotate<T>(array: T[], delta: number): T[] {
-  var n = array.length;
+  let n = array.length;
   if (n <= 1) {
     return array;
   }
-  var d = delta | 0;
+  let d = delta | 0;
   if (d > 0) {
     d = d % n;
   } else if (d < 0) {
@@ -594,7 +594,7 @@ function rotate<T>(array: T[], delta: number): T[] {
  *   return a < b;
  * }
  *
- * var data = [0, 3, 4, 7, 7, 9];
+ * let data = [0, 3, 4, 7, 7, 9];
  * arrays.lowerBound(data, 0, numberCmp);   // 0
  * arrays.lowerBound(data, 6, numberCmp);   // 3
  * arrays.lowerBound(data, 7, numberCmp);   // 3
@@ -606,10 +606,10 @@ function rotate<T>(array: T[], delta: number): T[] {
  */
 export
 function lowerBound<T, U>(array: T[], value: U, cmp: (element: T, value: U) => boolean): number {
-  var begin = 0;
-  var half: number;
-  var middle: number;
-  var n = array.length;
+  let begin = 0;
+  let half: number;
+  let middle: number;
+  let n = array.length;
   while (n > 0) {
     half = n >> 1;
     middle = begin + half;
@@ -650,7 +650,7 @@ function lowerBound<T, U>(array: T[], value: U, cmp: (element: T, value: U) => b
  *   return a < b;
  * }
  *
- * var data = [0, 3, 4, 7, 7, 9];
+ * let data = [0, 3, 4, 7, 7, 9];
  * arrays.upperBound(data, 0, numberCmp);   // 1
  * arrays.upperBound(data, 6, numberCmp);   // 3
  * arrays.upperBound(data, 7, numberCmp);   // 5
@@ -662,10 +662,10 @@ function lowerBound<T, U>(array: T[], value: U, cmp: (element: T, value: U) => b
  */
 export
 function upperBound<T, U>(array: T[], value: U, cmp: (value: U, element: T) => boolean): number {
-  var begin = 0;
-  var half: number;
-  var middle: number;
-  var n = array.length;
+  let begin = 0;
+  let half: number;
+  let middle: number;
+  let n = array.length;
   while (n > 0) {
     half = n >> 1;
     middle = begin + half;

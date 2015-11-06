@@ -101,7 +101,7 @@ function logger(value: number): void {
 
 
 // for-each with optional start index and wrap around
-var data = [1, 2, 3, 4];
+let data = [1, 2, 3, 4];
 arrays.forEach(data, logger);           // logs 1, 2, 3, 4
 arrays.forEach(data, logger, 2);        // logs 3, 4
 arrays.forEach(data, logger, 2, true);  // logs 3, 4, 1, 2
@@ -111,7 +111,7 @@ arrays.forEach(data, (v, i) => {        // 2
 
 
 // reverse for-each with optional start index and wrap around
-var data = [1, 2, 3, 4];
+let data = [1, 2, 3, 4];
 arrays.rforEach(data, logger);           // logs 4, 3, 2, 1
 arrays.rforEach(data, logger, 2);        // logs 3, 2, 1
 arrays.rforEach(data, logger, 2, true);  // logs 3, 2, 1, 4
@@ -126,7 +126,7 @@ function isEven(value: number): boolean {
 
 
 // find-index with optional start index and wrap around
-var data = [1, 2, 3, 4, 3, 2, 1];
+let data = [1, 2, 3, 4, 3, 2, 1];
 arrays.findIndex(data, isEven);           // 1
 arrays.findIndex(data, isEven, 4);        // 5
 arrays.findIndex(data, isEven, 6);        // -1
@@ -134,7 +134,7 @@ arrays.findIndex(data, isEven, 6, true);  // 1
 
 
 // reverse find-index with optional start index and wrap around
-var data = [1, 2, 3, 4, 3, 2, 1];
+let data = [1, 2, 3, 4, 3, 2, 1];
 arrays.rfindIndex(data, isEven);           // 5
 arrays.rfindIndex(data, isEven, 4);        // 3
 arrays.rfindIndex(data, isEven, 0);        // -1
@@ -142,7 +142,7 @@ arrays.rfindIndex(data, isEven, 0, true);  // 5
 
 
 // find-value with optional start index and wrap around
-var data = [1, 2, 3, 4, 3, 2, 1];
+let data = [1, 2, 3, 4, 3, 2, 1];
 arrays.find(data, isEven);           // 2
 arrays.find(data, isEven, 4);        // 2
 arrays.find(data, isEven, 6);        // undefined
@@ -150,7 +150,7 @@ arrays.find(data, isEven, 6, true);  // 2
 
 
 // reverse find-value with optional start index and wrap around
-var data = [1, 2, 3, 4, 3, 2, 1];
+let data = [1, 2, 3, 4, 3, 2, 1];
 arrays.rfind(data, isEven);           // 2
 arrays.rfind(data, isEven, 4);        // 4
 arrays.rfind(data, isEven, 0);        // undefined
@@ -158,7 +158,7 @@ arrays.rfind(data, isEven, 0, true);  // 2
 
 
 // insert value at a specified index
-var data = [0, 1, 2, 3, 4];
+let data = [0, 1, 2, 3, 4];
 arrays.insert(data, 0, 12);  // 0
 arrays.insert(data, 3, 42);  // 3
 arrays.insert(data, -9, 9);  // 0
@@ -167,7 +167,7 @@ console.log(data);           // [9, 12, 0, 1, 42, 2, 3, 4, 8]
 
 
 // move value from one index to another
-var data = [0, 1, 2, 3, 4];
+let data = [0, 1, 2, 3, 4];
 arrays.move(data, 1, 2);   // true
 arrays.move(data, -1, 0);  // false
 arrays.move(data, 4, 2);   // true
@@ -176,7 +176,7 @@ console.log(data);         // [0, 2, 4, 1, 3]
 
 
 // remove value at a specified index
-var data = [0, 1, 2, 3, 4];
+let data = [0, 1, 2, 3, 4];
 arrays.removeAt(data, 1);   // 1
 arrays.removeAt(data, 3);   // 4
 arrays.removeAt(data, 10);  // undefined
@@ -184,7 +184,7 @@ console.log(data);          // [0, 2, 3]
 
 
 // remove first occurrence of a value
-var data = [0, 1, 2, 3, 4];
+let data = [0, 1, 2, 3, 4];
 arrays.remove(data, 1);  // 1
 arrays.remove(data, 3);  // 2
 arrays.remove(data, 7);  // -1
@@ -192,14 +192,14 @@ console.log(data);       // [0, 2, 4]
 
 
 // reverse items subject to an optional range
-var data = [0, 1, 2, 3, 4];
+let data = [0, 1, 2, 3, 4];
 arrays.reverse(data, 1, 3);    // [0, 3, 2, 1, 4]
 arrays.reverse(data, 3);       // [0, 3, 2, 4, 1]
 arrays.reverse(data);          // [1, 4, 2, 3, 0]
 
 
 // rotate items by positive or negative delta
-var data = [0, 1, 2, 3, 4];
+let data = [0, 1, 2, 3, 4];
 arrays.rotate(data, 2);    // [2, 3, 4, 0, 1]
 arrays.rotate(data, -2);   // [0, 1, 2, 3, 4]
 arrays.rotate(data, 10);   // [0, 1, 2, 3, 4]
@@ -212,7 +212,7 @@ function numberCmp(a: number, b: number): number {
 
 
 // binary search for first item >= to a value
-var data = [0, 3, 4, 7, 7, 9];
+let data = [0, 3, 4, 7, 7, 9];
 arrays.lowerBound(data, 0, numberCmp);   // 0
 arrays.lowerBound(data, 6, numberCmp);   // 3
 arrays.lowerBound(data, 7, numberCmp);   // 3
@@ -221,7 +221,7 @@ arrays.lowerBound(data, 10, numberCmp);  // 6
 
 
 // binary search for first item > than a value
-var data = [0, 3, 4, 7, 7, 9];
+let data = [0, 3, 4, 7, 7, 9];
 arrays.upperBound(data, 0, numberCmp);   // 1
 arrays.upperBound(data, 6, numberCmp);   // 3
 arrays.upperBound(data, 7, numberCmp);   // 5
