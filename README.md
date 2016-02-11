@@ -4,13 +4,15 @@ phosphor-arrays
 [![Build Status](https://travis-ci.org/phosphorjs/phosphor-arrays.svg)](https://travis-ci.org/phosphorjs/phosphor-arrays?branch=master)
 [![Coverage Status](https://coveralls.io/repos/phosphorjs/phosphor-arrays/badge.svg?branch=master&service=github)](https://coveralls.io/github/phosphorjs/phosphor-arrays?branch=master)
 
-A collection of array utility functions.
+The `phosphor-arrays` module provides a collection of array utility functions
+to perform common operations such as in-place array modification, maping a
+function across all the items, and search for elements matching a given
+condition.
 
-[API Docs](http://phosphorjs.github.io/phosphor-arrays/api/)
 
 
-Package Install
----------------
+<a name='install'></a>Package Install
+-------------------------------------
 
 **Prerequisites**
 - [node](http://nodejs.org/)
@@ -79,153 +81,267 @@ Bundle for the Browser
 
 Follow the package install instructions first.
 
-```bash
-npm install --save-dev browserify
-browserify myapp.js -o mybundle.js
-```
-
+Any bundler that understands how to `require()` files with .js and .css
+extensions can be used with this package.
 
 Usage Examples
 --------------
 
-**Note:** This module is fully compatible with Node/Babel/ES6/ES5. Simply
-omit the type declarations when using a language other than TypeScript.
-
-```typescript
-import * as arrays
-  from 'phosphor-arrays';
+**Note:** This module is fully compatible with TypeScript/Node/Babel/ES6/ES5.
+Simply add the type declarations when using a TypeScript.
 
 
-function logger(value: number): void {
-  console.log(value);
-}
+You can test the `phsphor-arrays` module a the node interactive shell. After
+[installing](#install) it, open a terminal in your current working directory
+and run
 
-
-// for-each with optional start index and wrap around
-let data = [1, 2, 3, 4];
-arrays.forEach(data, logger);           // logs 1, 2, 3, 4
-arrays.forEach(data, logger, 2);        // logs 3, 4
-arrays.forEach(data, logger, 2, true);  // logs 3, 4, 1, 2
-arrays.forEach(data, (v, i) => {        // 2
-  if (v === 3) return i;
-});
-
-
-// reverse for-each with optional start index and wrap around
-let data = [1, 2, 3, 4];
-arrays.rforEach(data, logger);           // logs 4, 3, 2, 1
-arrays.rforEach(data, logger, 2);        // logs 3, 2, 1
-arrays.rforEach(data, logger, 2, true);  // logs 3, 2, 1, 4
-arrays.rforEach(data, (v, i) => {        // 2
-  if (v === 3) return i;
-});
-
-
-function isEven(value: number): boolean {
-  return value % 2 === 0;
-}
-
-
-// find-index with optional start index and wrap around
-let data = [1, 2, 3, 4, 3, 2, 1];
-arrays.findIndex(data, isEven);           // 1
-arrays.findIndex(data, isEven, 4);        // 5
-arrays.findIndex(data, isEven, 6);        // -1
-arrays.findIndex(data, isEven, 6, true);  // 1
-
-
-// reverse find-index with optional start index and wrap around
-let data = [1, 2, 3, 4, 3, 2, 1];
-arrays.rfindIndex(data, isEven);           // 5
-arrays.rfindIndex(data, isEven, 4);        // 3
-arrays.rfindIndex(data, isEven, 0);        // -1
-arrays.rfindIndex(data, isEven, 0, true);  // 5
-
-
-// find-value with optional start index and wrap around
-let data = [1, 2, 3, 4, 3, 2, 1];
-arrays.find(data, isEven);           // 2
-arrays.find(data, isEven, 4);        // 2
-arrays.find(data, isEven, 6);        // undefined
-arrays.find(data, isEven, 6, true);  // 2
-
-
-// reverse find-value with optional start index and wrap around
-let data = [1, 2, 3, 4, 3, 2, 1];
-arrays.rfind(data, isEven);           // 2
-arrays.rfind(data, isEven, 4);        // 4
-arrays.rfind(data, isEven, 0);        // undefined
-arrays.rfind(data, isEven, 0, true);  // 2
-
-
-// insert value at a specified index
-let data = [0, 1, 2, 3, 4];
-arrays.insert(data, 0, 12);  // 0
-arrays.insert(data, 3, 42);  // 3
-arrays.insert(data, -9, 9);  // 0
-arrays.insert(data, 12, 8);  // 8
-console.log(data);           // [9, 12, 0, 1, 42, 2, 3, 4, 8]
-
-
-// move value from one index to another
-let data = [0, 1, 2, 3, 4];
-arrays.move(data, 1, 2);   // true
-arrays.move(data, -1, 0);  // false
-arrays.move(data, 4, 2);   // true
-arrays.move(data, 10, 0);  // false
-console.log(data);         // [0, 2, 4, 1, 3]
-
-
-// remove value at a specified index
-let data = [0, 1, 2, 3, 4];
-arrays.removeAt(data, 1);   // 1
-arrays.removeAt(data, 3);   // 4
-arrays.removeAt(data, 10);  // undefined
-console.log(data);          // [0, 2, 3]
-
-
-// remove first occurrence of a value
-let data = [0, 1, 2, 3, 4];
-arrays.remove(data, 1);  // 1
-arrays.remove(data, 3);  // 2
-arrays.remove(data, 7);  // -1
-console.log(data);       // [0, 2, 4]
-
-
-// reverse items subject to an optional range
-let data = [0, 1, 2, 3, 4];
-arrays.reverse(data, 1, 3);    // [0, 3, 2, 1, 4]
-arrays.reverse(data, 3);       // [0, 3, 2, 4, 1]
-arrays.reverse(data);          // [1, 4, 2, 3, 0]
-
-
-// rotate items by positive or negative delta
-let data = [0, 1, 2, 3, 4];
-arrays.rotate(data, 2);    // [2, 3, 4, 0, 1]
-arrays.rotate(data, -2);   // [0, 1, 2, 3, 4]
-arrays.rotate(data, 10);   // [0, 1, 2, 3, 4]
-arrays.rotate(data, 9);    // [4, 0, 1, 2, 3]
-
-
-function numberCmp(a: number, b: number): number {
-  return a < b;
-}
-
-
-// binary search for first item >= to a value
-let data = [0, 3, 4, 7, 7, 9];
-arrays.lowerBound(data, 0, numberCmp);   // 0
-arrays.lowerBound(data, 6, numberCmp);   // 3
-arrays.lowerBound(data, 7, numberCmp);   // 3
-arrays.lowerBound(data, -1, numberCmp);  // 0
-arrays.lowerBound(data, 10, numberCmp);  // 6
-
-
-// binary search for first item > than a value
-let data = [0, 3, 4, 7, 7, 9];
-arrays.upperBound(data, 0, numberCmp);   // 1
-arrays.upperBound(data, 6, numberCmp);   // 3
-arrays.upperBound(data, 7, numberCmp);   // 5
-arrays.upperBound(data, -1, numberCmp);  // 0
-arrays.upperBound(data, 10, numberCmp);  // 6
 ```
+node
+```
+
+Then you can import the module into Node with the following command:
+
+```
+> arrays = require('./node_modules/phosphor-arrays/lib/index.js')
+```
+
+This will make all the functions from this module available. You can run a few
+tests to see how they work.
+
+The `forEach()` routine executes a callback function for each element in the
+array. It takes 2 mandatory parameters: the array and the callback function.
+Two additional parameters can be used: a number to set the start index, and a
+boolean value to determine whether the iteration wraps around around at the end
+of the array executing the callback for the remaining elements.
+
+```
+> function logger(value) {
+... console.log(value);
+... }
+
+> data = [1, 2, 3, 4];
+[ 1, 2, 3, 4 ]
+
+> arrays.forEach(data, logger);
+1
+2
+3
+4
+
+> arrays.forEach(data, logger, 2);
+3
+4
+
+> arrays.forEach(data, logger, 2, true);
+3
+4
+1
+2
+```
+
+The callback can individually access values and their corresponding indexes:
+
+```
+> arrays.forEach(data, (v, i) => {
+... if (v === 3) return i;
+... });
+2
+```
+
+A similar function, `rforEach()`, can execute the callback in reverse order. It
+takes the same parameters as `forEach()`:
+
+```
+> arrays.rforEach(data, logger);
+4
+3
+2
+1
+
+> arrays.rforEach(data, logger, 2);
+3
+2
+1
+
+> arrays.rforEach(data, logger, 2, true);
+3
+2
+1
+4
+```
+
+There are also functions to find the first element that matches a predicate. 
+You can either retrieve the value with `find()` or its index with
+`findIndex()`.
+
+```
+> function isEven(value) {
+... return value % 2 === 0;
+... }
+
+> data = [1, 2, 3, 4, 3, 2, 1];
+[ 1, 2, 3, 4, 3, 2, 1 ]
+
+
+> arrays.find(data, isEven)
+2
+> arrays.find(data, isEven, 4)
+2
+> arrays.find(data, isEven, 6)
+undefined
+> arrays.find(data, isEven, 6, true)
+2
+
+> arrays.findIndex(data, isEven)
+1
+> arrays.findIndex(data, isEven, 4)
+5
+> arrays.findIndex(data, isEven, 6)
+-1
+> arrays.findIndex(data, isEven, 6, true)
+1
+```
+
+The first two parameters are mandatory: the array of values to be searched and
+the predicate function to apply. Additional parameters can be passed to set the
+starting index of the search and determine whether the search wraps around the
+end of the array.
+
+The `rfind` and `rfindIndex` are the counterparts of `find` and `findIndex`,
+respectively, to perform reverse search:
+
+```
+> arrays.rfind(data, isEven)
+2
+> arrays.rfind(data, isEven, 0)
+undefined
+> arrays.rfind(data, isEven, 0, true)
+2
+
+> arrays.rfindIndex(data, isEven)
+5
+> arrays.rfindIndex(data, isEven, 0)
+-1
+> arrays.rfindIndex(data, isEven, 0, true)
+5
+```
+
+The `phosphor-arrays` module also provides functions for in-place array
+manipulation.
+
+You can insert a new element at a specified index with `insert()`. 
+```
+> data = [0, 1, 2, 3 ,4];
+[ 0, 1, 2, 3, 4 ]
+> arrays.insert(data, 0, 12);
+0
+> data;
+[ 12, 0, 1, 2, 3, 4 ]
+> arrays.insert(data, -3, 9);
+0
+> data;
+[ 9, 12, 0, 1, 2, 3, 4 ]
+> arrays.insert(data, 95, 10);
+7
+> data;
+[ 9, 12, 0, 1, 2, 3, 4, 10 ]
+
+```
+
+You can remove values by either looking for its first occurrence with
+`remove()` or providing an index with `removeAt()`.  
+```
+> data = [0, 1, 2, 3, 4];
+[ 0, 1, 2, 3, 4 ]
+> arrays.remove(data, 2);
+2
+> data;
+[ 0, 1, 3, 4 ]
+> arrays.remove(data, 7);
+-1
+> data;
+[ 0, 1, 3, 4 ]
+
+> data = [0, 1, 2, 3, 4];
+[ 0, 1, 2, 3, 4 ]
+> arrays.removeAt(data, 1);
+1
+> data;
+[ 0, 2, 3, 4 ]
+> arrays.removeAt(data, 10);
+undefined
+> data;
+[ 0, 2, 3, 4 ]
+```
+
+
+You can also rearrange the data. Use `move()` to move an element to a new
+position, `reverse()` to reverse the items in a given range, and `rotate()`
+to rotate the items by a positive or negative delta.
+```
+> data = [0, 1, 2, 3, 4];
+[ 0, 1, 2, 3, 4 ]
+> arrays.move(data, 1, 2)
+true
+> data
+[ 0, 2, 1, 3, 4 ]
+> arrays.move(data, -1, 0)
+false
+> data
+[ 0, 2, 1, 3, 4 ]
+
+> data = [0, 1, 2, 3, 4];
+[ 0, 1, 2, 3, 4 ]
+> arrays.reverse(data);
+[ 4, 3, 2, 1, 0 ]
+> arrays.reverse(data, 1, 3)
+[ 4, 1, 2, 3, 0 ]
+
+> data = [0, 1, 2, 3, 4];
+[ 0, 1, 2, 3, 4 ]
+> arrays.rotate(data, 2);
+[ 2, 3, 4, 0, 1 ]
+> arrays.rotate(data, -2);
+[ 0, 1, 2, 3, 4 ]
+> arrays.rotate(data, 10);
+[ 0, 1, 2, 3, 4 ]
+> arrays.rotate(data, 9);
+[ 4, 0, 1, 2, 3 ]
+```
+
+This module also includes routines to perform a binary search using a
+comparison function that returns `true` if an array element is less than the
+given value.
+
+You can use `lowerBound()` to search for the first item greater than or equal
+to the value, and `upperBound()` to search for the first item greater than the
+value. Both functions return the corresponding index.
+
+```
+> function numberCmp(a, b) {
+... return a < b;
+... }
+
+> data = [0, 3, 4, 7, 7, 9];
+[ 0, 3, 4, 7, 7, 9 ]
+> arrays.lowerBound(data, 0, numberCmp)
+0
+> arrays.lowerBound(data, 7, numberCmp)
+3
+> arrays.lowerBound(data, -1, numberCmp)
+0
+
+> arrays.upperBound(data, 0, numberCmp)
+1
+> arrays.upperBound(data, 7, numberCmp)
+5
+> arrays.upperBound(data, -1, numberCmp)
+0
+```
+
+API
+---
+
+[API Docs](http://phosphorjs.github.io/phosphor-arrays/api/globals.html)
+
+
