@@ -91,7 +91,7 @@ Usage Examples
 Simply add the type declarations when using a TypeScript.
 
 
-You can test the `phsphor-arrays` module on a node interactive shell. After
+To test the `phosphor-arrays` module on a node interactive shell, after
 [installing](#install) it, open a terminal in your current working directory
 and run
 
@@ -99,13 +99,13 @@ and run
 node
 ```
 
-Then you can import the module into Node with the following command:
+Then import the module into Node with the following command:
 
 ```node
 > arrays = require('./node_modules/phosphor-arrays/lib/index.js')
 ```
 
-This will make all the functions from this module available. You can run a few
+This makes all the functions from this module available. You can run a few
 tests to see how they work.
 
 The `forEach()` routine executes a callback function for each element in the
@@ -207,8 +207,8 @@ the predicate function to apply. Additional parameters can be passed to set the
 starting index of the search and determine whether the search wraps around the
 end of the array.
 
-The `rfind` and `rfindIndex` are the counterparts of `find` and `findIndex`,
-respectively, to perform reverse search:
+The `rfind` and `rfindIndex` functions are the counterparts of `find` and
+`findIndex`, respectively, to perform reverse search:
 
 ```node
 > arrays.rfind(data, isEven)
@@ -229,7 +229,7 @@ undefined
 The `phosphor-arrays` module also provides functions for in-place array
 manipulation.
 
-You can insert a new element at a specified index with `insert()`. 
+Insert a new element at a specified index with `insert()`. 
 
 ```node
 > data = [0, 1, 2, 3 ,4];
@@ -249,7 +249,7 @@ You can insert a new element at a specified index with `insert()`.
 
 ```
 
-You can remove values by either looking for its first occurrence with
+Remove values by either looking for its first occurrence with
 `remove()` or providing an index with `removeAt()`.  
 
 ```node
@@ -277,8 +277,8 @@ undefined
 ```
 
 
-You can also rearrange the data. Use `move()` to move an element to a new
-position, `reverse()` to reverse the items in a given range, and `rotate()`
+It is also possible to rearrange the data. Use `move()` to move an element to a
+new position, `reverse()` to reverse the items in a given range, and `rotate()`
 to rotate the items by a positive or negative delta.
 
 ```node
@@ -316,9 +316,9 @@ This module also includes routines to perform a binary search using a
 comparison function that returns `true` if an array element is less than the
 given value.
 
-You can use `lowerBound()` to search for the first item greater than or equal
-to the value, and `upperBound()` to search for the first item greater than the
-value. Both functions return the corresponding index.
+Use `lowerBound()` to search for the first item greater than or equal to the
+value, and `upperBound()` to search for the first item greater than the value.
+Both functions return the corresponding index.
 
 ```node
 > function numberCmp(a, b) {
