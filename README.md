@@ -91,7 +91,7 @@ Usage Examples
 Simply add the type declarations when using a TypeScript.
 
 
-You can test the `phsphor-arrays` module a the node interactive shell. After
+You can test the `phsphor-arrays` module on a node interactive shell. After
 [installing](#install) it, open a terminal in your current working directory
 and run
 
@@ -101,7 +101,7 @@ node
 
 Then you can import the module into Node with the following command:
 
-```
+```node
 > arrays = require('./node_modules/phosphor-arrays/lib/index.js')
 ```
 
@@ -114,7 +114,7 @@ Two additional parameters can be used: a number to set the start index, and a
 boolean value to determine whether the iteration wraps around around at the end
 of the array executing the callback for the remaining elements.
 
-```
+```node
 > function logger(value) {
 ... console.log(value);
 ... }
@@ -141,7 +141,7 @@ of the array executing the callback for the remaining elements.
 
 The callback can individually access values and their corresponding indexes:
 
-```
+```node
 > arrays.forEach(data, (v, i) => {
 ... if (v === 3) return i;
 ... });
@@ -151,7 +151,7 @@ The callback can individually access values and their corresponding indexes:
 A similar function, `rforEach()`, can execute the callback in reverse order. It
 takes the same parameters as `forEach()`:
 
-```
+```node
 > arrays.rforEach(data, logger);
 4
 3
@@ -174,7 +174,7 @@ There are also functions to find the first element that matches a predicate.
 You can either retrieve the value with `find()` or its index with
 `findIndex()`.
 
-```
+```node
 > function isEven(value) {
 ... return value % 2 === 0;
 ... }
@@ -210,7 +210,7 @@ end of the array.
 The `rfind` and `rfindIndex` are the counterparts of `find` and `findIndex`,
 respectively, to perform reverse search:
 
-```
+```node
 > arrays.rfind(data, isEven)
 2
 > arrays.rfind(data, isEven, 0)
@@ -230,7 +230,8 @@ The `phosphor-arrays` module also provides functions for in-place array
 manipulation.
 
 You can insert a new element at a specified index with `insert()`. 
-```
+
+```node
 > data = [0, 1, 2, 3 ,4];
 [ 0, 1, 2, 3, 4 ]
 > arrays.insert(data, 0, 12);
@@ -250,7 +251,8 @@ You can insert a new element at a specified index with `insert()`.
 
 You can remove values by either looking for its first occurrence with
 `remove()` or providing an index with `removeAt()`.  
-```
+
+```node
 > data = [0, 1, 2, 3, 4];
 [ 0, 1, 2, 3, 4 ]
 > arrays.remove(data, 2);
@@ -278,7 +280,8 @@ undefined
 You can also rearrange the data. Use `move()` to move an element to a new
 position, `reverse()` to reverse the items in a given range, and `rotate()`
 to rotate the items by a positive or negative delta.
-```
+
+```node
 > data = [0, 1, 2, 3, 4];
 [ 0, 1, 2, 3, 4 ]
 > arrays.move(data, 1, 2)
@@ -317,7 +320,7 @@ You can use `lowerBound()` to search for the first item greater than or equal
 to the value, and `upperBound()` to search for the first item greater than the
 value. Both functions return the corresponding index.
 
-```
+```node
 > function numberCmp(a, b) {
 ... return a < b;
 ... }
