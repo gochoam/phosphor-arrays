@@ -103,7 +103,7 @@ node
 Then import the module into Node with the following command:
 
 ```node
-> arrays = require('./node_modules/phosphor-arrays/lib/index.js')
+> arrays = require('phosphor-arrays')
 ```
 
 This makes all the functions from this module available. You can run a few
