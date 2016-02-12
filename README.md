@@ -5,10 +5,9 @@ phosphor-arrays
 [![Coverage Status](https://coveralls.io/repos/phosphorjs/phosphor-arrays/badge.svg?branch=master&service=github)](https://coveralls.io/github/phosphorjs/phosphor-arrays?branch=master)
 
 The `phosphor-arrays` module provides a collection of array utility functions
-to perform common operations such as in-place array modification, maping a
-function across all the items, and search for elements matching a given
-condition.
-
+to perform common operations such as in-place array modification, search for
+elements matching a given condition and binary search with a comparison
+function.
 
 
 <a name='install'></a>Package Install
@@ -84,16 +83,18 @@ Follow the package install instructions first.
 Any bundler that understands how to `require()` files with .js and .css
 extensions can be used with this package.
 
+
 Usage Examples
 --------------
 
 **Note:** This module is fully compatible with TypeScript/Node/Babel/ES6/ES5.
-Simply add the type declarations when using a TypeScript.
+Simply omit the type declarations when using this library from regular
+Javascript.
 
 
-To test the `phosphor-arrays` module on a node interactive shell, after
-[installing](#install) it, open a terminal in your current working directory
-and run
+To test the `phosphor-arrays` module in a node interactive shell after the
+[installation](#install), open a terminal in your current working directory and
+run:
 
 ```
 node
